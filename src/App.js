@@ -7,7 +7,9 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            votes: 0
+            votesV: 0,
+            votesC: 0,
+            votesS: 0,
         }
     }
 
@@ -16,17 +18,21 @@ class App extends Component {
       <div className="App">
         <header className="App-header">Voting Graph Lab X
         </header>
-          <div><button onClick={this.handleClick.bind(this)}>Vanilla</button>votes={this.state.votes}</div>
-          <div><button onClick={this.handleClick.bind(this)}>Chocolate</button>votes={this.state.votes}</div>
-          <div><button onClick={this.handleClick.bind(this)}>Strawberry</button>votes={this.state.votes}</div>
+          <div><button className = "vanilla" onClick={this.handleClickV.bind(this)}>Vanilla</button>votes={this.state.votesV}</div>
+          <div><button className = "chocolate"  onClick={this.handleClickC.bind(this)}>Chocolate</button>votes={this.state.votesC}</div>
+          <div><button className = "strawberry" onClick={this.handleClickS.bind(this)}>Strawberry</button>votes={this.state.votesS}</div>
       </div>
     );
   }
 
-  handleClick() {
-      // This is another way to update state. Provide a function that takes
-      // the old (previous) state and returns changes for the new state.
-      this.setState(prevState => ({ votes: prevState.votes + 1 }));
+  handleClickV() {
+    this.setState(prevState => ({ votesV: prevState.votesV + 1 })); 
+  }
+   handleClickC() {
+      this.setState(prevState => ({ votesC: prevState.votesC + 1 }));
+  }
+   handleClickS() {
+      this.setState(prevState => ({ votesS: prevState.votesS + 1 }));
   }
 }
 
