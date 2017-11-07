@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import GraphBarComponent from './GraphBarComponent';
+
 
 class GraphComponent extends Component {
 
@@ -16,18 +18,12 @@ class GraphComponent extends Component {
         // JavaScript object, not a string like in HTML.
         return (
             <div className="GraphComponent">
-
+                <GraphBarComponent className = "vanilla" />
+                <GraphBarComponent className = "chocolate" />
+                <GraphBarComponent className = "strawberry" />
             </div>
         );
     }
-
-    handleClick() {
-        debugger
-        // This is another way to update state. Provide a function that takes
-        // the old (previous) state and returns changes for the new state.
-        this.setState(prevState => ({ votes: prevState.votes + 1 }));
-    }
-
 }
 
 // Can't forget to export the component as the default export!

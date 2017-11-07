@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
 import GraphComponent from './GraphComponent';
-
 class App extends Component {
 
     constructor(props) {
@@ -10,7 +9,7 @@ class App extends Component {
             votesV: 0,
             votesC: 0,
             votesS: 0,
-        }
+        };
     }
 
   render() {
@@ -19,9 +18,9 @@ class App extends Component {
         <header className="App-header">Voting Graph Lab X
         </header>
         <GraphComponent />
-          <div><button className = "vanilla" onClick={this.handleClickV.bind(this)}>Vanilla</button>votes={this.state.votesV}</div>
-          <div><button className = "chocolate"  onClick={this.handleClickC.bind(this)}>Chocolate</button>votes={this.state.votesC}</div>
-          <div><button className = "strawberry" onClick={this.handleClickS.bind(this)}>Strawberry</button>votes={this.state.votesS}</div>
+          <div><button className = "vanilla" onClick={this.handleClickV.bind(this)}>{this.state.votesV} Vanilla</button></div>
+          <div><button className = "chocolate"  onClick={this.handleClickC.bind(this)}>{this.state.votesC} Chocolate</button></div>
+          <div><button className = "strawberry" onClick={this.handleClickS.bind(this)}>{this.state.votesS} Strawberry</button></div>
       </div>
     );
   }

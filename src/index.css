@@ -9,14 +9,42 @@ body {
     margin: 2em;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .GraphComponent {
-    background-color: white;
+	display: flex;
+	justify-content: space-around;
+    background-color: #c0daf2;
     box-shadow: 2px 2px 10px 2px #aaa;
     padding: 5%;
     box-sizing: border-box;
     width: 100%;
     margin-bottom: 20px;
+}
+
+.GraphBarComponent{
+    width: 120px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+
+    background-color: red;
+    margin: 2px;
+}
+
+button{
+	font-size: 1em;
+	margin: 2px;
+	width: 120px;
+}
+.vanilla{
+	background-color: ivory;
+}
+.chocolate{
+	background-color: tan;
+}
+
+.strawberry{
+	background-color: pink;
 }
