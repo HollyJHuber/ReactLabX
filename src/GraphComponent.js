@@ -11,9 +11,9 @@ class GraphComponent extends Component {
         // JavaScript object, not a string like in HTML.
         return (
             <div className="GraphComponent">
-                <section className="vanilla"><GraphBarComponent style={{height: this.props.votesV + "px"}} /></section>
-                <section className="chocolate"><GraphBarComponent /></section>
-                <section className="strawberry"><GraphBarComponent /></section>
+                <div className="vanilla"><GraphBarComponent/> </div>
+                <div className="chocolate"><GraphBarComponent /> </div>
+                <div className="strawberry"><GraphBarComponent /> </div>
             </div>
         );
     }
@@ -23,5 +23,8 @@ class GraphComponent extends Component {
 export default GraphComponent;
 
 
+// from pizza tower
 //style={{transform: "rotate(" + this.props.lean + "deg)"}}
-
+// I tried this: style={{height: + " "  + this.prop.votesV + "px"}}
+// and this: style={{height: this.prop.votesV + "px"}}
+// inside div and inside GraphBarComponent

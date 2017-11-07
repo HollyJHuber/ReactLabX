@@ -11,6 +11,7 @@ class GraphBarComponent extends Component {
         // JavaScript object, not a string like in HTML.
         return (
             <div className="GraphBarComponent">
+            
             </div>
         );
     }
