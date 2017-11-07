@@ -15,8 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">Voting Graph Lab X
-        </header>
+        <header className="App-header"> </header>
         <GraphComponent />
           <div><button className = "vanilla" onClick={this.handleClickV.bind(this)}>{this.state.votesV} Vanilla</button></div>
           <div><button className = "chocolate"  onClick={this.handleClickC.bind(this)}>{this.state.votesC} Chocolate</button></div>

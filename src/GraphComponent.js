@@ -4,13 +4,6 @@ import GraphBarComponent from './GraphBarComponent';
 
 class GraphComponent extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            votes: 0
-        }
-    }
-
     // React calls the render method every time the props change, which keeps
     // the component HTML up to date.
     render() {
@@ -18,9 +11,9 @@ class GraphComponent extends Component {
         // JavaScript object, not a string like in HTML.
         return (
             <div className="GraphComponent">
-                <GraphBarComponent className = "vanilla" />
-                <GraphBarComponent className = "chocolate" />
-                <GraphBarComponent className = "strawberry" />
+                <section className="vanilla"><GraphBarComponent style={{height: this.props.votesV + "px"}} /></section>
+                <section className="chocolate"><GraphBarComponent /></section>
+                <section className="strawberry"><GraphBarComponent /></section>
             </div>
         );
     }
@@ -28,4 +21,7 @@ class GraphComponent extends Component {
 
 // Can't forget to export the component as the default export!
 export default GraphComponent;
+
+
+//style={{transform: "rotate(" + this.props.lean + "deg)"}}
 
